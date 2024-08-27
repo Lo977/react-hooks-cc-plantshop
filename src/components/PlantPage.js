@@ -13,7 +13,7 @@ function PlantPage() {
   }, []);
   // console.log(plants);
   const filteredPlants = plants.filter((plant) =>
-    plant.name.toLowerCase().startsWith(search.toLowerCase())
+    plant.name.toLowerCase().includes(search.toLowerCase())
   );
   function handleNewPlants(newPlant) {
     setPlants([...plants, newPlant]);
